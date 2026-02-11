@@ -2,9 +2,13 @@ import 'dart:io';
 
 import 'package:dechbord_fruit_app/core/widgets/custom_button.dart';
 import 'package:dechbord_fruit_app/core/widgets/custom_text_field.dart';
+import 'package:dechbord_fruit_app/features/add_product/presentation/manger/cubit/add_product_cubit_cubit.dart';
 import 'package:dechbord_fruit_app/features/add_product/presentation/views/widgets/image_field.dart';
 import 'package:dechbord_fruit_app/features/add_product/presentation/views/widgets/is_featured_check_box.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../domain/entities/add_product_entity.dart';
 
 class AddProdutViewBody extends StatefulWidget {
   const AddProdutViewBody({super.key});
@@ -124,13 +128,19 @@ class _AddProdutViewBodyState extends State<AddProdutViewBody> {
                       if (image != null) {
                         if (_formKey.currentState!.validate()) {
                           _formKey.currentState!.save();
-
-                          const SnackBar(
-                            content: Text(
-                              'Product Added Successfully',
-                            ),
-                            backgroundColor: Colors.green,
-                          );
+                          AddProductEntity addProductEntity = AddProductEntity(
+                              nameProduct: name,
+                              priceProduct: price,
+                              expirationProduct: expirationMonths,
+                              numberofcaloriesProduct: numberOfCalories,
+                              unitsProduct: unitAmount,
+                              descriptionProduct: description,
+                              codeProduct: code,
+                              isFeatured: isChecked,
+                              imageProduct: image!);
+                          context
+                              .read<AddProductCubitCubit>()
+                              .addProduct(addProductEntity);
                         } else {
                           autovalidateMode = AutovalidateMode.always;
                           setState(() {});
