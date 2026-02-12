@@ -1,4 +1,4 @@
-import 'package:dechbord_fruit_app/core/services/get_it.dart';
+import 'package:dechbord_fruit_app/core/errors/services/get_it.dart';
 import 'package:dechbord_fruit_app/core/widgets/build_app_bar.dart';
 import 'package:dechbord_fruit_app/core/widgets/build_error_bar.dart';
 import 'package:dechbord_fruit_app/core/widgets/custom_progress_hud.dart';
