@@ -1,4 +1,4 @@
-import 'package:dechbord_fruit_app/core/services/database_service.dart';
+import 'package:dechbord_fruit_app/core/errors/services/database_service.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class SupbaseDatabase extends DatabaseService {
