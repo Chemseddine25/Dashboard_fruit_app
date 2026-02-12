@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:dechbord_fruit_app/core/errors/failures.dart';
 import 'package:dechbord_fruit_app/core/errors/services/storege_service.dart';
-import 'package:dechbord_fruit_app/features/add_product/presentation/views/widgets/repos/image_repos/upload_image_repo.dart';
+import 'package:dechbord_fruit_app/core/repos/image_repos/upload_image_repo.dart';
 
 class UploadImageImplRepo extends UploadImageRepo {
   final StorageService storegeService;

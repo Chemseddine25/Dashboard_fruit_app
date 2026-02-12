@@ -5,7 +5,7 @@ import 'package:dechbord_fruit_app/core/errors/failures.dart';
 import 'package:dechbord_fruit_app/core/errors/services/database_service.dart';
 import 'package:dechbord_fruit_app/features/add_product/data/models/add_products_model.dart';
 import 'package:dechbord_fruit_app/features/add_product/domain/entities/add_product_entity.dart';
-import 'package:dechbord_fruit_app/features/add_product/presentation/views/widgets/repos/product_repos/add_product_repo.dart';
+import 'package:dechbord_fruit_app/core/repos/product_repos/add_product_repo.dart';
 
 class AddProductImplRepo extends AddProductRepo {
   final DatabaseService databaseService;
